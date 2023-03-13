@@ -26,6 +26,7 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       flexDirection: 'column',
       alignItems: 'center'
     }}>
+      <h1 sx={{ fontFamily: 'heading' }}>Rosie and Ed</h1>
       <nav sx={{ color: 'primary' }}>
         <NavLink to='/' title='Home'/>
         <NavLink to='/about' title='About'/>
