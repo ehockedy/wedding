@@ -2,6 +2,7 @@
 import { jsx } from 'theme-ui'
 import * as React from 'react'
 import { Link } from 'gatsby'
+import flowers from '../images/flowers.png'
 
 type NavLinkProps = {
   to: string; // page to navigate to
@@ -13,6 +14,9 @@ const NavLink = ({ to, title }: NavLinkProps) => {
     {title}
   </Link>
 }
+
+// https://www.pngaaa.com/detail/111349
+const FlowerGraphic = ({ flipX }: {flipX?: boolean}) => <img sx={{ width: '200px', transform: flipX ? 'scale(-1)' : 'scaleY(-1)' } } src={flowers} />
 
 type LayoutProps = {
     pageTitle: string;
@@ -26,7 +30,17 @@ const Layout = ({ pageTitle, children }: LayoutProps) => {
       flexDirection: 'column',
       alignItems: 'center'
     }}>
-      <h1 sx={{ fontFamily: 'heading' }}>Rosie and Ed</h1>
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'row'
+        }}
+      >
+        <FlowerGraphic />
+        <h1 sx={{ fontFamily: 'heading', display: 'flex', alignItems: 'center' }}>Rosie and Ed</h1>
+        <FlowerGraphic flipX/>
+      </div>
+
       <nav sx={{ color: 'primary' }}>
         <NavLink to='/' title='Home'/>
         <NavLink to='/about' title='About'/>
