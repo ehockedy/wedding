@@ -1,4 +1,5 @@
 import * as React from 'react'
+import CustomLayout from "./wrapPageElement"
 
 export const onRenderBody = ({ setHeadComponents }) => {
   setHeadComponents([
@@ -12,3 +13,5 @@ export const onRenderBody = ({ setHeadComponents }) => {
     />
   ])
 }
+
+export const wrapPageElement = CustomLayout

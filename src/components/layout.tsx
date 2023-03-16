@@ -1,28 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import * as React from "react";
-import { Link } from "gatsby";
+import { PageProps } from "gatsby";
 import flowers from "../images/flowers.png";
-
-type NavLinkProps = {
-  path: string; // page to navigate to
-  currentPath: string; // page currently on
-  title: string;
-};
-
-const NavLink = ({ path, title, currentPath }: NavLinkProps) => {
-  return (
-    <Link
-      to={path}
-      sx={{
-        mx: 3,
-        textDecoration: path === currentPath ? "underline" : "none",
-      }}
-    >
-      {title}
-    </Link>
-  );
-};
+import { PageContext } from "./pageContext";
+import NavLinks from "./navLinks";
 
 // https://www.pngaaa.com/detail/111349
 const FlowerGraphic = ({ flipX }: { flipX?: boolean }) => (
@@ -37,40 +19,42 @@ const FlowerGraphic = ({ flipX }: { flipX?: boolean }) => (
 );
 
 type LayoutProps = {
-  currentPage: string;
+  pageProps: PageProps;
   children: React.ReactNode;
 };
 
-const Layout = ({ currentPage, children }: LayoutProps) => {
+const Layout = ({ children, pageProps }: LayoutProps) => {
   return (
-    <div
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-      }}
-    >
+    <PageContext.Provider value={{ location: pageProps?.location?.pathname }}>
       <div
         sx={{
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
-        <FlowerGraphic />
-        <h1
-          sx={{ fontFamily: "heading", display: "flex", alignItems: "center" }}
+        <div
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+          }}
         >
-          Rosie and Ed
-        </h1>
-        <FlowerGraphic flipX />
+          <FlowerGraphic />
+          <h1
+            sx={{
+              fontFamily: "heading",
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            Rosie and Ed
+          </h1>
+          <FlowerGraphic flipX />
+        </div>
+        <NavLinks />
+        <main>{children}</main>
       </div>
-
-      <nav sx={{ color: "primary" }}>
-        <NavLink path="/" title="Home" currentPath={currentPage} />
-        <NavLink path="/about/" title="About" currentPath={currentPage} />
-      </nav>
-      <main>{children}</main>
-    </div>
+    </PageContext.Provider>
   );
 };
 

@@ -2,10 +2,8 @@ import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
 import Layout from "../components/layout";
 
-const IndexPage = ({ location }: PageProps) => {
-  return (
-    <Layout currentPage={location.pathname}>Welcome to our wedding site</Layout>
-  );
+const IndexPage = () => {
+  return "Welcome to our wedding site";
 };
 
 export default IndexPage;
