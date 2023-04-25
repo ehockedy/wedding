@@ -14,6 +14,12 @@ const config: GatsbyConfig = {
     options: {
       preset: require('./src/theme'),
     },
+  },
+  {
+    resolve: `gatsby-plugin-styled-components`,
+    options: {
+      // Add any options here
+    },
   }]
 };
 
