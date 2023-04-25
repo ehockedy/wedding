@@ -2,21 +2,32 @@
 import { jsx } from "theme-ui";
 import * as React from "react";
 import { PageProps } from "gatsby";
-import flowers from "../images/flowers.png";
+import flowersLeft from "../images/flowers_left.png";
+import flowersRight from "../images/flowers_right.png";
 import { PageContext } from "./pageContext";
 import NavLinks from "./navLinks";
 
-// https://www.pngaaa.com/detail/111349
-const FlowerGraphic = ({ flipX }: { flipX?: boolean }) => (
-  <img
-    sx={{
-      width: "200px",
-      transform: flipX ? "scale(-1)" : "scaleY(-1)",
-      mx: 3,
-    }}
-    src={flowers}
-  />
-);
+const Footer = () => {
+  return (
+    <div
+      sx={{
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        mt: "-16px",
+        zIndex: -1,
+      }}
+    >
+      <img src={flowersLeft} sx={{ height: "240px", userSelect: "none" }} />
+      <div sx={{ mb: 2 }}>
+        Created by Edward Hockedy and Rosie Keates | Built with{" "}
+        <a href="https://www.gatsbyjs.com/">Gatsby</a>
+      </div>
+      <img src={flowersRight} sx={{ height: "240px", userSelect: "none" }} />
+    </div>
+  );
+};
 
 type LayoutProps = {
   pageProps: PageProps;
@@ -28,31 +39,36 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
     <PageContext.Provider value={{ location: pageProps?.location?.pathname }}>
       <div
         sx={{
+          alignItems: "center",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
+          fontFamily: "body",
+          mt: 2,
+          minHeight: "100vh",
         }}
       >
         <div
           sx={{
             display: "flex",
             flexDirection: "row",
+            alignItems: "center",
           }}
         >
-          <FlowerGraphic />
           <h1
             sx={{
-              fontFamily: "heading",
-              display: "flex",
               alignItems: "center",
+              display: "flex",
+              fontFamily: "heading",
+              fontSize: 6,
+              my: 3,
             }}
           >
             Rosie and Ed
           </h1>
-          <FlowerGraphic flipX />
         </div>
         <NavLinks />
-        <main>{children}</main>
+        <main sx={{ flex: 1 }}>{children}</main>
+        <Footer />
       </div>
     </PageContext.Provider>
   );

@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { useContext } from "react";
 import { Link } from "gatsby";
-import { PageContext } from "./pageContext";
 
 type NavLinkProps = {
   path: string; // page to navigate to
@@ -10,13 +8,24 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ path, title }: NavLinkProps) => {
-  const { location } = useContext(PageContext);
   return (
     <Link
       to={path}
+      activeClassName="active"
       sx={{
-        mx: 3,
-        textDecoration: path === location ? "underline" : "none",
+        mx: 4,
+        px: 1,
+        fontFamily: "secondary",
+        color: "textSecondary",
+        "&.active": {
+          color: "textSecondary",
+          borderBottomColor: "textSecondary",
+          borderBottomStyle: "solid",
+          borderBottomWidth: "1px",
+          pb: 0,
+        },
+        letterSpacing: "2px",
+        textDecoration: "none",
       }}
     >
       {title}
@@ -25,9 +34,11 @@ const NavLink = ({ path, title }: NavLinkProps) => {
 };
 
 const NavLinks = () => (
-  <nav sx={{ color: "primary" }}>
+  <nav sx={{ color: "primary", fontFamily: "secondary", mb: 3 }}>
     <NavLink path="/" title="Home" />
-    <NavLink path="/about/" title="About" />
+    <NavLink path="/about/" title="Location" />
+    <NavLink path="/day/" title="Schedule" />
+    <NavLink path="/rsvp/" title="RSVP" />
   </nav>
 );
 

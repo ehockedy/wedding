@@ -1,9 +1,40 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
-import Layout from "../components/layout";
+import type { HeadFC } from "gatsby";
+import brinsop from "../images/Brinsop-Court-1.webp";
 
 const IndexPage = () => {
-  return "Welcome to our wedding site";
+  return (
+    <div
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+      }}
+    >
+      <img
+        src={brinsop}
+        sx={{
+          width: "600px",
+          height: "auto",
+          mx: 3,
+          mt: 5,
+        }}
+        alt="Logo"
+      />
+      <div
+        sx={{
+          fontSize: 4,
+          mb: 4,
+          ml: 5,
+        }}
+      >
+        <div sx={{ fontWeight: "bold" }}>11th May 2024</div>
+        <div>Brinsop Court, Hereford</div>
+      </div>
+    </div>
+  );
 };
 
 export default IndexPage;
