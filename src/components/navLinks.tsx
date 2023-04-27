@@ -36,8 +36,8 @@ const NavLink = ({ path, title }: NavLinkProps) => {
 const NavLinks = () => (
   <nav sx={{ color: "primary", fontFamily: "secondary", mb: 3 }}>
     <NavLink path="/" title="Home" />
-    <NavLink path="/about/" title="Location" />
-    <NavLink path="/day/" title="Schedule" />
+    <NavLink path="/location/" title="Location" />
+    <NavLink path="/schedule/" title="Schedule" />
     <NavLink path="/rsvp/" title="RSVP" />
   </nav>
 );
