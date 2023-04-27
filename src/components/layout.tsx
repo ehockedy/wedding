@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "theme-ui";
+import { jsx, ThemeUIStyleObject } from "theme-ui";
 import * as React from "react";
 import { PageProps } from "gatsby";
 import flowersLeft from "../images/flowers_left.png";
@@ -8,6 +8,11 @@ import { PageContext } from "./pageContext";
 import NavLinks from "./navLinks";
 
 const Footer = () => {
+  const flowersStyling: ThemeUIStyleObject = {
+    height: "240px",
+    userSelect: "none",
+    zIndex: -1,
+  };
   return (
     <div
       sx={{
@@ -15,16 +20,17 @@ const Footer = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "flex-end",
-        mt: "-16px",
-        zIndex: -1,
+        mt: "-80px",
       }}
     >
-      <img src={flowersLeft} sx={{ height: "240px", userSelect: "none" }} />
+      <img src={flowersLeft} sx={flowersStyling} />
       <div sx={{ mb: 2 }}>
         Created by Edward Hockedy and Rosie Keates | Built with{" "}
-        <a href="https://www.gatsbyjs.com/">Gatsby</a>
+        <a href="https://www.gatsbyjs.com/" target="_blank">
+          Gatsby
+        </a>
       </div>
-      <img src={flowersRight} sx={{ height: "240px", userSelect: "none" }} />
+      <img src={flowersRight} sx={flowersStyling} />
     </div>
   );
 };
@@ -43,15 +49,15 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
           display: "flex",
           flexDirection: "column",
           fontFamily: "body",
-          mt: 2,
           minHeight: "100vh",
         }}
       >
         <div
           sx={{
+            mx: 3,
             display: "flex",
-            flexDirection: "row",
             alignItems: "center",
+            flexDirection: "column",
           }}
         >
           <h1
@@ -60,11 +66,15 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
               display: "flex",
               fontFamily: "heading",
               fontSize: 6,
-              my: 3,
+              mt: 3,
+              mb: 0,
             }}
           >
             Rosie and Ed
           </h1>
+          <div sx={{ fontFamily: "body", fontSize: 3, mb: 3 }}>
+            - 11th May 2024 -
+          </div>
         </div>
         <NavLinks />
         <main sx={{ flex: 1 }}>{children}</main>

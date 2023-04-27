@@ -16,14 +16,16 @@ const IndexPage = () => {
       <img
         src={brinsop}
         sx={{
-          width: "600px",
+          width: "700px",
           height: "auto",
           mx: 3,
-          mt: 5,
+          mt: 3,
+          border: "3px solid #896710",
+          p: "4px",
         }}
         alt="Logo"
       />
-      <div
+      {/* <div
         sx={{
           fontSize: 4,
           mb: 4,
@@ -32,7 +34,7 @@ const IndexPage = () => {
       >
         <div sx={{ fontWeight: "bold" }}>11th May 2024</div>
         <div>Brinsop Court, Hereford</div>
-      </div>
+      </div> */}
     </div>
   );
 };
