@@ -5,7 +5,7 @@ import { PageProps } from "gatsby";
 import flowersLeft from "../images/flowers_left.png";
 import flowersRight from "../images/flowers_right.png";
 import { PageContext } from "./pageContext";
-import NavLinks from "./navLinks";
+import { NavLinksDT, NavLinksMW } from "./navLinks";
 
 const Footer = () => {
   const flowersStyling: ThemeUIStyleObject = {
@@ -13,6 +13,7 @@ const Footer = () => {
     userSelect: "none",
     zIndex: -1,
   };
+  // TODO use banner across whole bottom on tablet and mobile
   return (
     <div
       sx={{
@@ -24,7 +25,7 @@ const Footer = () => {
       }}
     >
       <img src={flowersLeft} sx={flowersStyling} />
-      <div sx={{ mb: 2 }}>
+      <div sx={{ mb: 2, fontSize: 1 }}>
         Created by Edward Hockedy and Rosie Keates | Built with{" "}
         <a href="https://www.gatsbyjs.com/" target="_blank">
           Gatsby
@@ -58,6 +59,9 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
+            width: "100%",
+            position: ["relative", null, null],
+            top: [0, null, null],
           }}
         >
           <h1
@@ -65,18 +69,40 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
               alignItems: "center",
               display: "flex",
               fontFamily: "heading",
-              fontSize: 6,
+              fontSize: [4, 6, 6],
               mt: 3,
               mb: 0,
             }}
           >
             Rosie and Ed
           </h1>
-          <div sx={{ fontFamily: "body", fontSize: 3, mb: 3 }}>
+          <div
+            sx={{
+              fontFamily: "body",
+              mb: 3,
+              fontSize: [2, 3, 3],
+            }}
+          >
             - 11th May 2024 -
           </div>
+          <div
+            sx={{
+              display: [null, "none", "none"],
+              position: "absolute",
+              left: 0,
+              top: 0,
+              bottom: 0,
+              marginTop: "auto",
+              marginBottom: "auto",
+              height: "50px",
+            }}
+          >
+            <NavLinksMW />
+          </div>
         </div>
-        <NavLinks />
+        <div sx={{ display: ["none", "initial", "initial"] }}>
+          <NavLinksDT />
+        </div>
         <main sx={{ flex: 1 }}>{children}</main>
         <Footer />
       </div>
