@@ -4,21 +4,22 @@ import * as React from "react";
 import { PageProps } from "gatsby";
 import flowersLeft from "../images/flowers_left.png";
 import flowersRight from "../images/flowers_right.png";
+import flowersMobile from "../images/flowers_mobile.png";
 import { PageContext } from "./pageContext";
 import { NavLinksDT, NavLinksMW } from "./navLinks";
+import { Fragment } from "react";
 
-const Footer = () => {
+const FooterDT = () => {
   const flowersStyling: ThemeUIStyleObject = {
     height: "240px",
     userSelect: "none",
     zIndex: -1,
   };
-  // TODO use banner across whole bottom on tablet and mobile
   return (
     <div
       sx={{
         width: "100%",
-        display: "flex",
+        display: ["none", "none", "flex"],
         justifyContent: "space-between",
         alignItems: "flex-end",
         mt: "-80px",
@@ -35,6 +36,41 @@ const Footer = () => {
     </div>
   );
 };
+
+const FooterMW = () => {
+  return (
+    <div
+      sx={{
+        width: "100%",
+        display: [null, null, "none"],
+        textAlign: "center",
+      }}
+    >
+      <img
+        src={flowersMobile}
+        sx={{
+          width: "100vw",
+          height: [null, "300px", null],
+          objectFit: [null, "cover", null],
+          objectPosition: "0 0",
+        }}
+      />
+      <div sx={{ mb: 2, fontSize: 1 }}>
+        Created by Edward Hockedy and Rosie Keates | Built with{" "}
+        <a href="https://www.gatsbyjs.com/" target="_blank">
+          Gatsby
+        </a>
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => (
+  <Fragment>
+    <FooterDT />
+    <FooterMW />
+  </Fragment>
+);
 
 type LayoutProps = {
   pageProps: PageProps;
@@ -69,7 +105,7 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
               alignItems: "center",
               display: "flex",
               fontFamily: "heading",
-              fontSize: [4, 6, 6],
+              fontSize: [5, 6, 6],
               mt: 3,
               mb: 0,
             }}
