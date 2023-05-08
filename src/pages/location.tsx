@@ -58,8 +58,8 @@ const LocationPage = () => {
         >
           <h3>Reception</h3>
           <p sx={{ ...placeDescStyling, textAlign: [null, "end", null] }}>
-            The reception will be held only a 2 minute drive away at the
-            beautiful Brinsop Court Manor. There is plenty of parking on site.
+            The reception will be held only a short drive away at the beautiful
+            Brinsop Court Manor. There is plenty of parking on site.
           </p>
           <a href="https://goo.gl/maps/hXVbpuY2zjCWztCSA" target="_blank">
             Click here to view in Google maps
