@@ -55,7 +55,7 @@ const FooterMW = () => {
           objectPosition: "0 0",
         }}
       />
-      <div sx={{ mb: 2, fontSize: 1 }}>
+      <div sx={{ mb: 2, fontSize: [0, 1, null] }}>
         Created by Edward Hockedy and Rosie Keates | Built with{" "}
         <a href="https://www.gatsbyjs.com/" target="_blank">
           Gatsby
@@ -139,7 +139,9 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
         <div sx={{ display: ["none", "initial", "initial"] }}>
           <NavLinksDT />
         </div>
-        <main sx={{ flex: 1 }}>{children}</main>
+        <main sx={{ flex: 1, width: [null, "700px", null], mx: 3 }}>
+          {children}
+        </main>
         <Footer />
       </div>
     </PageContext.Provider>

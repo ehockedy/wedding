@@ -4,13 +4,13 @@ import stGeorgeChurch from "../images/stgeorge.jpg";
 import brinsop from "../images/Brinsop-Court-1.webp";
 
 const LocationPage = () => {
-  const imgStyling: ThemeUIStyleObject = { height: "180px" };
+  const imgStyling: ThemeUIStyleObject = { height: "180px", my: 3, mx: 1 };
   const placeSectionStyling: ThemeUIStyleObject = {
     display: "flex",
-    flexDirection: "row",
+    flexDirection: ["column", "row", null],
     alignItems: "center",
     justifyContent: "space-between",
-    my: 5,
+    mt: [3, 5, null],
     width: "100%",
     a: {
       color: "text",
@@ -21,13 +21,13 @@ const LocationPage = () => {
   };
 
   return (
-    <main sx={{ width: "700px" }}>
+    <main sx={{}}>
       <div>
         <h3>Location</h3>
         <div>
           The wedding will be taking place around Hereford, to which there are
           direct trains from places including London, Oxford, and Chester. The
-          church and venue are a 20 minute drive from the City centre
+          church and venue are a 20 minute drive from the City centre.
         </div>
       </div>
       <div sx={placeSectionStyling}>
@@ -35,7 +35,8 @@ const LocationPage = () => {
           <h3>Service</h3>
           <p sx={placeDescStyling}>
             Our service will be taking place at the quaint St. George's Church
-            in Hereford.
+            in Hereford. Parking is limited so please try to car share where
+            possible.
           </p>
           <a href="https://goo.gl/maps/dusMqFxvfSfULNXf9" target="_blank">
             Click here to view in Google maps
@@ -43,19 +44,22 @@ const LocationPage = () => {
         </div>
         <img src={stGeorgeChurch} sx={imgStyling}></img>
       </div>
-      <div sx={placeSectionStyling}>
+      <div
+        sx={{
+          ...placeSectionStyling,
+          flexDirection: ["column-reverse", "row", null],
+        }}
+      >
         <img src={brinsop} sx={imgStyling}></img>
         <div
           sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-end",
+            textAlign: [null, "right", null],
           }}
         >
           <h3>Reception</h3>
-          <p sx={{ ...placeDescStyling, textAlign: "end" }}>
-            Following that, our reception will be held only a 2 minute drive
-            away at the beautiful Brinsop Court Manor.
+          <p sx={{ ...placeDescStyling, textAlign: [null, "end", null] }}>
+            The reception will be held only a 2 minute drive away at the
+            beautiful Brinsop Court Manor. There is plenty of parking on site.
           </p>
           <a href="https://goo.gl/maps/hXVbpuY2zjCWztCSA" target="_blank">
             Click here to view in Google maps

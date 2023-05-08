@@ -8,18 +8,19 @@ const IndexPage = () => {
     <div
       sx={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: "column",
         alignItems: "center",
       }}
     >
       <img
         src={brinsop}
         sx={{
-          width: "700px",
+          width: ["95%", "100%", null],
           height: "auto",
           mx: 3,
           mt: 3,
           border: "3px solid #896710",
+          boxSizing: "border-box",
           p: "4px",
         }}
         alt="Logo"
