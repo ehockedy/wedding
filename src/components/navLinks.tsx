@@ -6,9 +6,10 @@ import { useState, Fragment, useEffect } from "react";
 type NavLinkProps = {
   path: string; // page to navigate to
   title: string;
+  onClick?: () => void;
 };
 
-const NavLink = ({ path, title }: NavLinkProps) => {
+const NavLink = ({ path, title, onClick }: NavLinkProps) => {
   return (
     <Link
       to={path}
@@ -28,18 +29,20 @@ const NavLink = ({ path, title }: NavLinkProps) => {
         letterSpacing: "2px",
         textDecoration: "none",
       }}
+      onClick={onClick}
     >
       {title}
     </Link>
   );
 };
 
-const NavOptions = () => (
+type NavOptionsProps = { onClick?: () => void };
+const NavOptions = ({ onClick }: NavOptionsProps) => (
   <Fragment>
-    <NavLink path="/" title="Home" />
-    <NavLink path="/location/" title="Location" />
-    <NavLink path="/schedule/" title="Schedule" />
-    <NavLink path="/rsvp/" title="RSVP" />
+    <NavLink path="/" title="Home" onClick={onClick} />
+    <NavLink path="/location/" title="Location" onClick={onClick} />
+    <NavLink path="/schedule/" title="Schedule" onClick={onClick} />
+    <NavLink path="/rsvp/" title="RSVP" onClick={onClick} />
   </Fragment>
 );
 
@@ -55,7 +58,8 @@ const NavOptionsWrapperDT = () => (
   </nav>
 );
 
-const NavOptionsWrapperMW = () => (
+type NavOptionsWrapperMWProps = { onClick: () => void };
+const NavOptionsWrapperMW = ({ onClick }: NavOptionsWrapperMWProps) => (
   <nav
     sx={{
       color: "primary",
@@ -65,7 +69,7 @@ const NavOptionsWrapperMW = () => (
       gap: 4,
     }}
   >
-    <NavOptions />
+    <NavOptions onClick={onClick} />
   </nav>
 );
 
@@ -136,7 +140,7 @@ export const NavLinksMW = () => {
             &times;
           </button>
         </div>
-        <NavOptionsWrapperMW />
+        <NavOptionsWrapperMW onClick={() => setOpen(false)} />
       </div>
     </Fragment>
   );
