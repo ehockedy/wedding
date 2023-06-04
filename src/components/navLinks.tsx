@@ -49,7 +49,6 @@ const NavOptions = ({ onClick }: NavOptionsProps) => (
 const NavOptionsWrapperDT = () => (
   <nav
     sx={{
-      color: "primary",
       fontFamily: "secondary",
       mb: 3,
     }}
@@ -62,7 +61,6 @@ type NavOptionsWrapperMWProps = { onClick: () => void };
 const NavOptionsWrapperMW = ({ onClick }: NavOptionsWrapperMWProps) => (
   <nav
     sx={{
-      color: "primary",
       fontFamily: "secondary",
       display: "flex",
       flexDirection: "column",
