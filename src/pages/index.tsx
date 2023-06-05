@@ -15,16 +15,22 @@ const IndexPage = () => {
       <img
         src={brinsop}
         sx={{
-          width: ["95%", "100%", null],
-          height: "auto",
+          width: ["90vw", "100%", null],
+          height: ["150px", "260px", null],
+          objectFit: "cover",
           mx: 3,
-          mt: 3,
           border: "3px solid #896710",
           boxSizing: "border-box",
           p: "4px",
         }}
         alt="Logo"
       />
+      <div sx={{ textAlign: "justify", my: 3, mx: 4 }}>
+        Hello! Welcome to our wedding website. We are so excited to have you
+        attend our big day and can't wait to celebrate with you! We hope the
+        site provides all the important information you'll need, but please
+        don't hesitate to reach out to either of us with any questions.
+      </div>
     </div>
   );
 };

@@ -90,6 +90,12 @@ const MenuIcon = () => {
 export const NavLinksMW = () => {
   const [open, setOpen] = useState<boolean>(false);
 
+  const closeMenu = () => {
+    setOpen(false);
+    document.documentElement.classList.remove("bg-fixed");
+    document.body.classList.remove("bg-fixed");
+  };
+
   return (
     <Fragment>
       <button
@@ -129,16 +135,12 @@ export const NavLinksMW = () => {
         >
           <button
             sx={{ all: "unset", fontSize: 5, lineHeight: "20px", m: 3 }}
-            onClick={() => {
-              setOpen(false);
-              document.documentElement.classList.remove("bg-fixed");
-              document.body.classList.remove("bg-fixed");
-            }}
+            onClick={closeMenu}
           >
             &times;
           </button>
         </div>
-        <NavOptionsWrapperMW onClick={() => setOpen(false)} />
+        <NavOptionsWrapperMW onClick={closeMenu} />
       </div>
     </Fragment>
   );
