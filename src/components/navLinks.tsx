@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, ThemeUIStyleObject } from "theme-ui";
 import { Link } from "gatsby";
-import { useState, Fragment, useEffect } from "react";
+import { useState, Fragment } from "react";
 
 type NavLinkProps = {
   path: string; // page to navigate to
@@ -43,6 +43,7 @@ const NavOptions = ({ onClick }: NavOptionsProps) => (
     <NavLink path="/location/" title="Location" onClick={onClick} />
     <NavLink path="/schedule/" title="Schedule" onClick={onClick} />
     <NavLink path="/rsvp/" title="RSVP" onClick={onClick} />
+    <NavLink path="/faqs/" title="FAQs" onClick={onClick} />
   </Fragment>
 );
 

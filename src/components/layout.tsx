@@ -108,6 +108,7 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
               fontSize: [5, 6, 6],
               mt: 3,
               mb: 0,
+              userSelect: "none",
             }}
           >
             Rosie and Ed
@@ -117,6 +118,7 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
               fontFamily: "body",
               mb: 3,
               fontSize: [2, 3, 3],
+              userSelect: "none",
             }}
           >
             - 11th May 2024 -
