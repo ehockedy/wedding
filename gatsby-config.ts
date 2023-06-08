@@ -20,7 +20,14 @@ const config: GatsbyConfig = {
     options: {
       // Add any options here
     },
-  }]
+  },
+  {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      icon: 'src/images/favicon.png',
+    },
+  },
+  ]
 };
 
 export default config;
