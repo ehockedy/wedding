@@ -28,7 +28,7 @@ const FAQPage = () => {
       />
       <FAQ
         question="What is the dress code?"
-        answer="Formal wedding attire. Suites and summer dresses, that sort of thing."
+        answer="Formal wedding attire. Suits and summer dresses, that sort of thing."
       />
       <FAQ
         question="Are children allowed?"
@@ -39,8 +39,8 @@ const FAQPage = () => {
         answer="It would be sensible, but you won't be refused entry to the ceremony if you haven't."
       />
       <FAQ
-        question="What if Eurovision is on the same day?!"
-        answer="This is a very real possibility. If it is, we can only apologise. We will be just as distraught as you. However, a viewing party post wedding might well be on the cards!"
+        question="Isn't Eurovision on the same day?!"
+        answer="Yes, this is unfortunately the case. However, for those staying on site there is the possibility of a Eurovision afterparty."
       />
       <FAQ
         question="Which one is Rosie and which one is Ed?"

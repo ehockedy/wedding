@@ -24,69 +24,69 @@ const HotelLink = (props: HotelLinkProps) => {
   );
 };
 
-const LocationPage = () => {
-  const imgStyling: ThemeUIStyleObject = { height: "180px", my: 3, mx: 1 };
+type LocationSectionProps = {
+  title: string,
+  description: string,
+  imageUrl: string,
+  googleMapsUrl: string,
+}
+
+const LocationSection = ({ title, description, imageUrl, googleMapsUrl }: LocationSectionProps) => {
+  const imgStyling: ThemeUIStyleObject = {
+    height: "200px",
+    my: 3,
+    mx: 1
+  };
   const placeSectionStyling: ThemeUIStyleObject = {
     display: "flex",
     flexDirection: ["column", "row", null],
-    alignItems: "center",
+    alignItems: ["center", "start", null],
     justifyContent: "space-between",
-    mt: [3, 4, null],
+    my: [3, 4, null],
     width: "100%",
     a: {
       color: "text",
     },
+    gap: ["8px", "40px", null],
   };
   const placeDescStyling: ThemeUIStyleObject = {
     maxWidth: "400px",
+    textAlign: 'justify',
+    my: 3,
   };
+
+  return <div sx={placeSectionStyling}>
+    <div>
+      <h3 sx={{ fontSize: 4, my: 1 }}>
+        {title}</h3>
+      <p sx={placeDescStyling}>
+        {description}
+      </p>
+      <a href={googleMapsUrl} target="_blank" sx={{ textAlign: 'right' }}>
+        Click here to view in Google maps
+      </a>
+    </div>
+    <img src={imageUrl} sx={imgStyling}></img>
+  </div>
+}
+
+const LocationPage = () => {
+
 
   return (
     <main sx={{}}>
-      <div>
-        <h2>Location</h2>
-        <div>
-          The wedding will be taking place around Hereford, to which there are
-          direct trains from places including London, Oxford, and Chester. The
-          church and venue are a 20 minute drive from the City centre.
-        </div>
-      </div>
-      <div sx={placeSectionStyling}>
-        <div>
-          <h3>Service</h3>
-          <p sx={placeDescStyling}>
-            Our service will be taking place at the quaint St. George's Church
-            in Hereford. Parking is limited so please try to car share where
-            possible.
-          </p>
-          <a href="https://goo.gl/maps/dusMqFxvfSfULNXf9" target="_blank">
-            Click here to view in Google maps
-          </a>
-        </div>
-        <img src={stGeorgeChurch} sx={imgStyling}></img>
-      </div>
-      <div
-        sx={{
-          ...placeSectionStyling,
-          flexDirection: ["column-reverse", "row", null],
-        }}
-      >
-        <img src={brinsop} sx={imgStyling}></img>
-        <div
-          sx={{
-            textAlign: [null, "right", null],
-          }}
-        >
-          <h3>Reception</h3>
-          <p sx={{ ...placeDescStyling, textAlign: [null, "end", null] }}>
-            The reception will be held only a short drive away at the beautiful
-            Brinsop Court Manor. There is plenty of parking on site.
-          </p>
-          <a href="https://goo.gl/maps/hXVbpuY2zjCWztCSA" target="_blank">
-            Click here to view in Google maps
-          </a>
-        </div>
-      </div>
+      <LocationSection
+        title="Service"
+        description="Our service will be taking place at the quaint St. George's Church in Hereford. Parking is limited so please try to car share where possible."
+        imageUrl={stGeorgeChurch}
+        googleMapsUrl="https://goo.gl/maps/dusMqFxvfSfULNXf9"
+      />
+      <LocationSection
+        title="Reception"
+        description="The reception will be held only a short drive away at the beautiful Brinsop Court Manor. There is plenty of parking on site."
+        imageUrl={brinsop}
+        googleMapsUrl="https://goo.gl/maps/hXVbpuY2zjCWztCSA"
+      />
 
       <div sx={{ my: 4 }}>
         <h2>Accommodation</h2>

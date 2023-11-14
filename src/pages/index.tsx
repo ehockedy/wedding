@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import type { HeadFC } from "gatsby";
+import { Link } from "gatsby";
 import brinsop from "../images/Brinsop-Court-1.webp";
 
 const IndexPage = () => {
@@ -27,9 +28,36 @@ const IndexPage = () => {
       />
       <div sx={{ textAlign: "justify", my: 3, mx: 4 }}>
         Hello! Welcome to our wedding website. We are so excited to have you
-        attend our big day and can't wait to celebrate with you! We hope the
+        attend our big day and can't wait to celebrate with you. We hope the
         site provides all the important information you'll need, but please
         don't hesitate to reach out to either of us with any questions.
+      </div>
+      <div
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          mt: 4
+        }}
+      >
+        <Link
+          sx={{
+            backgroundColor: '#d1b8a0',
+            border: 'none',
+            borderRadius: '18px',
+            height: '36px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textDecoration: 'none',
+            color: "text"
+          }}
+          to="rsvp"
+        >
+          Click to RSVP
+        </Link>
+        <span sx={{ my: 2 }}>
+          Please respond by 1st Feburary
+        </span>
       </div>
     </div>
   );
