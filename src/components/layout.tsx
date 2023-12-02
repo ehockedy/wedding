@@ -9,6 +9,33 @@ import { PageContext } from "./pageContext";
 import { NavLinksDT, NavLinksMW } from "./navLinks";
 import { Fragment } from "react";
 
+const FooterText = () => <div sx={{ mb: 2, fontSize: [0, 1, null] }}>
+  Created by{" "}
+  <a
+    href="https://home.edhockedy.com"
+    target="_blank"
+    sx={{
+      textDecoration: 'none',
+      fontWeight: 'bold',
+      color: "text"
+    }}
+  >
+    Edward Hockedy
+  </a>
+  {" "}and Rosie Keates | Built with{" "}
+  <a
+    href="https://www.gatsbyjs.com/"
+    target="_blank"
+    sx={{
+      textDecoration: 'none',
+      fontWeight: 'bold',
+      color: "text"
+    }}
+  >
+    Gatsby
+  </a>
+</div>
+
 const FooterDT = () => {
   const flowersStyling: ThemeUIStyleObject = {
     height: "240px",
@@ -26,32 +53,7 @@ const FooterDT = () => {
       }}
     >
       <img src={flowersLeft} sx={flowersStyling} />
-      <div sx={{ mb: 2, fontSize: 1 }}>
-        Created by{" "}
-        <a
-          href="https://home.edhockedy.com"
-          target="_blank"
-          sx={{
-            textDecoration: 'none',
-            fontWeight: 'bold',
-            color: "text"
-          }}
-        >
-          Edward Hockedy
-        </a>
-        {" "}and Rosie Keates | Built with{" "}
-        <a
-          href="https://www.gatsbyjs.com/"
-          target="_blank"
-          sx={{
-            textDecoration: 'none',
-            fontWeight: 'bold',
-            color: "text"
-          }}
-        >
-          Gatsby
-        </a>
-      </div>
+      <FooterText />
       <img src={flowersRight} sx={flowersStyling} />
     </div>
   );
@@ -75,12 +77,13 @@ const FooterMW = () => {
           objectPosition: "0 0",
         }}
       />
-      <div sx={{ mb: 2, fontSize: [0, 1, null] }}>
+      <FooterText />
+      {/* <div sx={{ mb: 2, fontSize: [0, 1, null] }}>
         Created by Edward Hockedy and Rosie Keates | Built with{" "}
         <a href="https://www.gatsbyjs.com/" target="_blank">
           Gatsby
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
