@@ -36,12 +36,13 @@ const IndexPage = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          mt: 4
+          mt: 4,
+          zIndex: 1, // So appears in front of footer
         }}
       >
         <Link
           sx={{
-            backgroundColor: '#d1b8a0',
+            backgroundColor: 'buttonPrimary',
             border: 'none',
             borderRadius: '18px',
             height: '36px',
@@ -49,7 +50,11 @@ const IndexPage = () => {
             alignItems: 'center',
             justifyContent: 'center',
             textDecoration: 'none',
-            color: "text"
+            color: "text",
+            ':hover': {
+              backgroundColor: 'buttonTint',
+              cursor: 'pointer',
+            },
           }}
           to="rsvp"
         >

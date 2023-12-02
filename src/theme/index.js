@@ -5,7 +5,9 @@ const theme = {
     text: '#000',
     textSecondary: '#999',
     shadow: '#22222270',
-    invisible: '#00000000'
+    invisible: '#00000000',
+    buttonPrimary: '#d1b8a0',
+    buttonTint: '#dfcebe'
   },
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontSizes: [8, 12, 16, 20, 24, 32, 48, 64, 72],
