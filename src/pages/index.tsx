@@ -36,8 +36,7 @@ const IndexPage = () => {
         sx={{
           display: 'flex',
           flexDirection: 'column',
-          mt: 4,
-          zIndex: 1, // So appears in front of footer
+          mt: 4
         }}
       >
         <Link
