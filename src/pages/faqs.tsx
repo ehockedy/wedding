@@ -20,7 +20,7 @@ const FAQPage = () => {
     <div>
       <FAQ
         question="Why are you getting married in Hereford?"
-        answer="Guests will be coming from all around the country, so would have to travel anyway. We though Brinsop was the most beautiful, magical place, and we instantly fell in love with it."
+        answer="Having both lived across the country, we didn't want to let location limit us to finding the perfect venue. We though Brinsop was the most beautiful, magical place, and we instantly fell in love with it."
       />
       <FAQ
         question="Should I drive to the church?"
@@ -28,11 +28,11 @@ const FAQPage = () => {
       />
       <FAQ
         question="What is the dress code?"
-        answer="Formal wedding attire. Suits and summer dresses, that sort of thing."
+        answer="Formal wedding attire please."
       />
       <FAQ
         question="Are children allowed?"
-        answer="Children of certain close family and friends may attend, we will have already spoken to you if it applies. Otherwise, please don't bring any children, especially ones that don't belong to you, for many reasons..."
+        answer="Children of certain close family and friends may attend, we will have already spoken to you if it applies. Otherwise, please don't bring any children, especially ones that don't belong to you..."
       />
       <FAQ
         question="Should I eat lunch before the service?"

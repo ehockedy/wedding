@@ -92,15 +92,25 @@ const LocationPage = () => {
         <h2>Accommodation</h2>
         <h3>Staying at Brinsop Court</h3>
         <div>
-          There are many rooms in the main building itself, though these have
-          been pre-allocated to family and close friends. We will have reached
-          out to you to arrange booking these rooms.
+          There are some beautiful rooms available in the main house of Brinsop Court.
+          Guests who stay here can come to the morning after breakfast with the bride and groom.
+          Most of these rooms share bathrooms with other rooms.
+          <a
+            href="https://rooms.brinsopcourt.com/availability/5A6934977"
+            target="_blank"
+            sx={{
+              display: "block",
+              color: "text",
+            }}
+          >
+            Click here to go to the booking page
+          </a>
         </div>
         <h3>On-site Glamping</h3>
         <div>
           Brinsop Glamping provides multiple on-site glamping tents, about a
           minute walk from where the party will finish. We have exclusive use of
-          this site for the night of the wedding. Be aware the toilets and
+          this site for the night of the wedding. Please note the toilets and
           washing facilities are shared campsite style.
           <a
             href="https://www.brinsopcourt.com/brinsop-court/glamping/"
@@ -115,8 +125,7 @@ const LocationPage = () => {
         </div>
         <h3>Nearby Hotels</h3>
         <div>
-          There are plenty of other places to stay in nearby Hereford, including
-          some more affordable options:
+          There are plenty of other places to stay in nearby Hereford:
         </div>
         <span>Check out </span>
         <HotelLink
@@ -135,7 +144,7 @@ const LocationPage = () => {
         />
         <span> on the world largest travel site.</span>
         <div sx={{ fontSize: 2, my: 4 }}>
-          Don't forget to leave a review or you'll make Ed sad.
+          Don't forget to leave a Tripadvisor review or you'll make Ed sad.
         </div>
       </div>
     </main>
