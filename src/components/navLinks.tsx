@@ -43,6 +43,7 @@ const NavOptions = ({ onClick }: NavOptionsProps) => (
     <NavLink path="/location/" title="Location" onClick={onClick} />
     <NavLink path="/schedule/" title="Schedule" onClick={onClick} />
     <NavLink path="/rsvp/" title="RSVP" onClick={onClick} />
+    <NavLink path="/registry/" title="Gift Registry" onClick={onClick} />
     <NavLink path="/faqs/" title="FAQs" onClick={onClick} />
   </Fragment>
 );
