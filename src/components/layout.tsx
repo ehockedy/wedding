@@ -27,8 +27,28 @@ const FooterDT = () => {
     >
       <img src={flowersLeft} sx={flowersStyling} />
       <div sx={{ mb: 2, fontSize: 1 }}>
-        Created by Edward Hockedy and Rosie Keates | Built with{" "}
-        <a href="https://www.gatsbyjs.com/" target="_blank">
+        Created by{" "}
+        <a
+          href="https://home.edhockedy.com"
+          target="_blank"
+          sx={{
+            textDecoration: 'none',
+            fontWeight: 'bold',
+            color: "text"
+          }}
+        >
+          Edward Hockedy
+        </a>
+        {" "}and Rosie Keates | Built with{" "}
+        <a
+          href="https://www.gatsbyjs.com/"
+          target="_blank"
+          sx={{
+            textDecoration: 'none',
+            fontWeight: 'bold',
+            color: "text"
+          }}
+        >
           Gatsby
         </a>
       </div>
