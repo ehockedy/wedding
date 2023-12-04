@@ -31,6 +31,10 @@ const FAQPage = () => {
         answer="Formal wedding attire please."
       />
       <FAQ
+        question="Will there be taxis available?"
+        answer="Yes, we will pre-book some taxis from Brinsop which will leave at 00:15."
+      />
+      <FAQ
         question="Are children allowed?"
         answer="Children of certain close family and friends may attend, we will have already spoken to you if it applies. Otherwise, please don't bring any children, especially ones that don't belong to you..."
       />

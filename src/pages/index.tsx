@@ -54,6 +54,7 @@ const IndexPage = () => {
               backgroundColor: 'buttonTint',
               cursor: 'pointer',
             },
+            zIndex: [0, 0, 1]
           }}
           to="rsvp"
         >

@@ -119,6 +119,7 @@ export const NavLinksMW = () => {
           top: 0,
           left: open ? "0%" : "-100%",
           transition: "background-color .5s",
+          zIndex: 1,
         }}
       ></div>
       <div
@@ -130,6 +131,7 @@ export const NavLinksMW = () => {
           height: "100vh",
           width: "80vw",
           backgroundColor: "background",
+          zIndex: 1,
         }}
       >
         <div
