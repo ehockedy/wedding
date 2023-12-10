@@ -14,7 +14,7 @@ const theme = {
   fonts: {
     heading: 'RollanceBeauty',
     secondary: 'Courier New, monospace',
-    body: 'Garamond, serif',
+    body: 'EB Garamond, serif',
   }
 }
 
