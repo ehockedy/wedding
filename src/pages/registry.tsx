@@ -12,15 +12,14 @@ const GiftRegistryPage = () => {
         alignItems: "center",
         mt: 3
     }}>
-        <div>
+        {/* <div>
             Your presence at our wedding is more than enough. But if you would like to send us a gift, you can pick one of the following options:
         </div>
         <a sx={linkStyling}>John Lewis gift list</a>
-
-        <a sx={linkStyling}>Honeymoon fund contribution</a>
-
-
-
+        <a sx={linkStyling}>Honeymoon fund contribution</a> */}
+        <div sx={linkStyling}>
+            We greatly appreciate your eagerness to give a little something! We're currently working on compliling our wedding wish list, so please check back later when we'll have links to the wish list as well as a honeymoon fund page.
+        </div>
     </div>;
 };
 
