@@ -142,7 +142,7 @@ const LocationPage = () => {
           href="https://www.tripadvisor.co.uk/Hotels-g186302-Hereford_Herefordshire_England-Hotels.html"
           linkText="see more hotels in Hereford"
         />
-        <span> on the world largest travel site.</span>
+        <span> on the world's largest travel site.</span>
         <div sx={{ fontSize: 2, my: 4 }}>
           Don't forget to leave a Tripadvisor review or you'll make Ed sad.
         </div>
