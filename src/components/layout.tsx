@@ -109,7 +109,7 @@ const Layout = ({ children, pageProps }: LayoutProps) => {
           display: "flex",
           flexDirection: "column",
           fontFamily: "body",
-          minHeight: "100vh"
+          minHeight: "100vh",
         }}
       >
         <div

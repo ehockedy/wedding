@@ -20,15 +20,15 @@ const FAQPage = () => {
     <div>
       <FAQ
         question="Why are you getting married in Hereford?"
-        answer="Having both lived across the country, we didn't want to let location limit us to finding the perfect venue. We though Brinsop was the most beautiful, magical place, and we instantly fell in love with it."
+        answer="Having both lived in different places across the country, we didn't want to let location limit us to finding the perfect venue. We thought Brinsop was the most beautiful, magical place, and we instantly fell in love with it."
       />
       <FAQ
         question="Should I drive to the church?"
-        answer="The church has parking for about 15 cars at an absolute maximum. It would be sensible to park at Brinsop Court, and car share from there (2 min drive) if possible."
+        answer="The church is a small countryside church, so parking is fairly limited. Depending on weather, the adjacent field may be available to use. As a precaution, please try to car share where possible (you can head to Brinsop Court, then share from there as it is a 2 min drive). We will update you if the parking situation changes and the extra parking is available."
       />
       <FAQ
         question="What is the dress code?"
-        answer="Formal wedding attire please."
+        answer="Lounge suits and cocktail dresses"
       />
       <FAQ
         question="Will there be taxis available?"
@@ -41,6 +41,10 @@ const FAQPage = () => {
       <FAQ
         question="Should I eat lunch before the service?"
         answer="It would be sensible, but you won't be refused entry to the ceremony if you haven't."
+      />
+      <FAQ
+        question="Is there anything happening the evening before the wedding?"
+        answer="Yes, we will be congregating for a drink in Hereford city centre, starting at The Green Dragon Hotel cocktail bar at around 8pm. Please contact Ed or Rosie to find out where we are on the night."
       />
       <FAQ
         question="Isn't Eurovision on the same day?!"
