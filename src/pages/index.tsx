@@ -61,7 +61,7 @@ const IndexPage = () => {
           Click to RSVP
         </Link>
         <span sx={{ my: 2 }}>
-          Please respond by 1st Feburary
+          Please respond by 1st March
         </span>
       </div>
     </div>

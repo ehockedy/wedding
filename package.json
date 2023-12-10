@@ -27,7 +27,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.10",
-    "theme-ui": "^0.15.5"
+    "theme-ui": "^0.15.5",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
