@@ -23,8 +23,14 @@ const SchedulePage = () => {
     flexDirection: "column",
     alignItems: "center",
   }}>
-    <Event name="Arrival at church" time="13:00" />
+    <Event name="Arrival at St George's Church, Brinsop" time="13:00" />
     <Event name="Ceremony begins" time="13:30" />
+	<Event name="Drinks Reception at Brinsop Court" time="15:00" />
+	<Event name="Meal Begins" time="17:30" />
+	<Event name="The Windy City Seven" time="19:00" />
+	<Event name="Butler Jazz Band" time="20:45" />
+	<Event name="DJ" time="22:00" />
+	<Event name="Carriages" time="00:00" />
 
   </div>;
 };
