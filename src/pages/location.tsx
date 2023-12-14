@@ -92,9 +92,9 @@ const LocationPage = () => {
         <h2>Accommodation</h2>
         <h3>Staying at Brinsop Court</h3>
         <div>
-          There are some beautiful rooms available in the main house of Brinsop Court.
-          Guests who stay here can come to the morning after breakfast with the bride and groom.
-          Most of these rooms share bathrooms with other rooms.
+          There are some beautiful rooms available in the main house of Brinsop Court, as well as some luxurious glamping tents.
+          Guests who stay here may attend the morning after breakfast with the bride and groom.
+          Most of the rooms in the house share bathrooms with other rooms. The glamping tents have a shared toilet and shower block.
           <a
             href="https://rooms.brinsopcourt.com/availability/5A6934977"
             target="_blank"
@@ -105,8 +105,13 @@ const LocationPage = () => {
           >
             Click here to go to the booking page
           </a>
+          <div sx={{ marginTop: 3, fontSize: '14px' }}>
+            You may see the Bridal Suite is still available to purchase. Don't worry, you are allowed to book this!
+            We have chosen a different room in the house for our wedding night. Also note the bridal party will be
+            using it to get ready in the morning.
+          </div>
         </div>
-        <h3>On-site Glamping</h3>
+        {/* <h3>On-site Glamping</h3>
         <div>
           Brinsop Glamping provides multiple on-site glamping tents, about a
           minute walk from where the party will finish. We have exclusive use of
@@ -122,7 +127,7 @@ const LocationPage = () => {
           >
             Click here to go to the booking page
           </a>
-        </div>
+        </div> */}
         <h3>Nearby Hotels</h3>
         <div>
           There are plenty of other places to stay in nearby Hereford:
@@ -139,7 +144,8 @@ const LocationPage = () => {
         />
         <span>, or </span>
         <HotelLink
-          href="https://www.tripadvisor.co.uk/Hotels-g186302-Hereford_Herefordshire_England-Hotels.html"
+          // href="https://www.tripadvisor.co.uk/Hotels-g186302-Hereford_Herefordshire_England-Hotels.html"
+          href="https://www.tripadvisor.co.uk/Hotels-g186302-Hereford_Herefordshire_England-Hotels.html?staydates=2024_5_11_2024_5_1"
           linkText="see more hotels in Hereford"
         />
         <span> on the world's largest travel site.</span>

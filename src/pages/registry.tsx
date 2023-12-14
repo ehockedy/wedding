@@ -4,7 +4,7 @@ import type { HeadFC } from "gatsby";
 
 
 const GiftRegistryPage = () => {
-    const linkStyling = { fontWeight: 'bold', fontSize: 3, mt: 3 }
+    const linkStyling = { /*fontWeight: 'bold',*/ fontSize: 3, mt: 3 }
 
     return <div sx={{
         display: "flex",

@@ -14,6 +14,7 @@ const Event = ({ name, time, info }: EventProps) => <div sx={{
   alignItems: "center",
   my: 3,
   fontSize: 18,
+  textAlign: 'center',
 }}>
   <div sx={{ fontWeight: 'bold' }} >{time}</div>
   <div>{name}</div>
