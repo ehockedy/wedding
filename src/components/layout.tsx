@@ -15,8 +15,7 @@ const FooterText = () => <div sx={{ mb: 2, fontSize: [0, 1, null] }}>
     href="https://home.edhockedy.com"
     target="_blank"
     sx={{
-      textDecoration: 'none',
-      fontWeight: 'bold',
+      textDecoration: 'underline',
       color: "text"
     }}
   >
@@ -27,8 +26,7 @@ const FooterText = () => <div sx={{ mb: 2, fontSize: [0, 1, null] }}>
     href="https://www.gatsbyjs.com/"
     target="_blank"
     sx={{
-      textDecoration: 'none',
-      fontWeight: 'bold',
+      textDecoration: 'underline',
       color: "text"
     }}
   >

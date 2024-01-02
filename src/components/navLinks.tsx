@@ -15,7 +15,7 @@ const NavLink = ({ path, title, onClick }: NavLinkProps) => {
       to={path}
       activeClassName="active"
       sx={{
-        mx: [0, 2, 4],
+        mx: [4, 2, 4],
         px: 1,
         fontFamily: "secondary",
         color: "textSecondary",
