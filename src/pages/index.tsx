@@ -4,6 +4,35 @@ import type { HeadFC } from "gatsby";
 import { Link } from "gatsby";
 import brinsop from "../images/Brinsop-Court-1.webp";
 
+type ResponseButtonProps = {
+  text: string;
+  linkTarget: string;
+}
+
+const ResponseButton = ({ text, linkTarget }: ResponseButtonProps) => <Link
+  sx={{
+    backgroundColor: 'buttonPrimary',
+    border: 'none',
+    borderRadius: '18px',
+    height: '36px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textDecoration: 'none',
+    color: "text",
+    px: 2,
+    my: 2,
+    ':hover': {
+      backgroundColor: 'buttonTint',
+      cursor: 'pointer',
+    },
+    zIndex: [0, 0, 1]
+  }}
+  to={linkTarget}
+>
+  {text}
+</Link>
+
 const IndexPage = () => {
   return (
     <div
@@ -39,29 +68,10 @@ const IndexPage = () => {
           mt: 4
         }}
       >
-        <Link
-          sx={{
-            backgroundColor: 'buttonPrimary',
-            border: 'none',
-            borderRadius: '18px',
-            height: '36px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            textDecoration: 'none',
-            color: "text",
-            ':hover': {
-              backgroundColor: 'buttonTint',
-              cursor: 'pointer',
-            },
-            zIndex: [0, 0, 1]
-          }}
-          to="rsvp"
-        >
-          Click to RSVP
-        </Link>
+        {/* <ResponseButton text={"Click to RSVP"} linkTarget="rsvp" /> */}
+        <ResponseButton text={"Go to food choices"} linkTarget="foodChoices" />
         <span sx={{ my: 2 }}>
-          Please respond by 1st March
+          Please respond as soon as possible
         </span>
       </div>
     </div>

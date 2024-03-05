@@ -24,7 +24,7 @@ const FAQPage = () => {
       />
       <FAQ
         question="Should I drive to the church?"
-        answer="The church is a small countryside church, so parking is fairly limited. Depending on weather, the adjacent field may be available to use. As a precaution, please try to car share where possible (you can head to Brinsop Court, then share from there as it is a 2 min drive). We will update you if the parking situation changes and the extra parking is available."
+        answer="The church is a small countryside church, so parking is fairly limited. Depending on weather, the adjacent field may be available to use. As a precaution, please try to car share where possible (you can head to Brinsop Court, then share from there as it is a 4 min drive). We will update you if the parking situation changes and the extra parking is available."
       />
       <FAQ
         question="What is the dress code?"
@@ -47,8 +47,8 @@ const FAQPage = () => {
         answer="Yes, we will be congregating for a drink in Hereford city centre, starting at The Green Dragon Hotel cocktail bar at around 8pm. Please contact Ed or Rosie to find out where we are on the night."
       />
       <FAQ
-        question="Isn't Eurovision on the same day?!"
-        answer="Yes, this is unfortunately the case. However, for those staying on site there is the possibility of a Eurovision afterparty."
+        question="Will there be an afterparty"
+        answer="Yep! For those staying on site we have access to the house where we can continue to party (or all have a cup of tea)."
       />
       <FAQ
         question="Which one is Rosie and which one is Ed?"
